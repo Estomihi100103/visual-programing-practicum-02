@@ -1,8 +1,8 @@
-//12S23045 -Chintya Reginauli Rajagukguk
+// 12S23045 - Chintya Reginauli Rajagukguk
 import java.util.*;
 import java.lang.Math;
 
-class P02_02.java {
+class Prak-02 {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -16,10 +16,10 @@ class P02_02.java {
         lantai = input.nextLine();
         ketersediaanteknologi = input.nextLine();
         kapasitas = (int) ((double) kapasitas / jumlah * 100);
-        if (kapasitas > 40) {
+        if (kapasitas >= 40) {
             kapasitas1 = "gudang elite";
         } else {
-            if (kapasitas < 40 && kapasitas > 25) {
+            if (kapasitas < 40 && kapasitas >= 25) {
                 kapasitas1 = "gudang standar";
             } else {
                 if (kapasitas < 25) {
