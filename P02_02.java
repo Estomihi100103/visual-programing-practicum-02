@@ -2,7 +2,7 @@
 import java.util.*;
 import java.lang.Math;
 
-class P02_02 {
+public class P02_02 {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -17,12 +17,12 @@ class P02_02 {
         String penilaian;
 
         namaGudang = input.nextLine();
-        kapasitasGudang = input.nextInt();
-        jumlahBuku = input.nextInt();
+        kapasitasGudang = Integer.parseInt(input.nextLine());
+        jumlahBuku = Integer.parseInt(input.nextLine());
         aC = input.nextLine();
         lantai = input.nextLine();
         ketersediaanTeknologi = input.nextLine();
-        skor = (int) ((double) jumlahBuku / kapasitasGudang * 100);
+        skor = (double) jumlahBuku / kapasitasGudang * 100;
         if (skor >= 40) {
             penilaian = "Gudang Elite";
         } else {

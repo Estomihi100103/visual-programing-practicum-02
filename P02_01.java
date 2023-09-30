@@ -2,65 +2,41 @@
 import java.util.*;
 import java.lang.Math;
 
-class P02_01 {
+public class P02_01 {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        String namaKonser;
-        String tanggalKonser;
-        String jenisTiket;
-        int nomorTiket;
-        int hargaTiket;
-        int jumlahTiket;
+        String deskripsiTugas;
+        String kodeMataKuliah;
+        String namaMataKuliah;
+        String pengampu;
+        String deadline;
+        String formatPenamaanTugas;
+        double tingkatKesulitan, hariDeadline;
+        double prioritas;
+        String status;
 
-        System.out.println("1. VIP Rp : 300000, sisa 20 tiket");
-        System.out.println("2. Reguler Rp : 200000, sisa 50 tiket");
-        System.out.println("3. Economy Rp : 100000, sisa 10 tiket");
-        System.out.println("NamaKonser");
-        System.out.println("Tanggal Konser");
-        System.out.println("Jenis Tiket");
-        System.out.println("Nomor Tiket");
-        System.out.println("Jumlah Tiket");
-        namaKonser = input.nextLine();
-        tanggalKonser = input.nextLine();
-        jenisTiket = input.nextLine();
-        nomorTiket = input.nextInt();
-        jumlahTiket = input.nextInt();
-        if (jenisTiket.equals("VIP")) {
-            if (jumlahTiket > 20) {
-                System.out.println("JumlahTiketTidakTersedia");
-            } else {
-                if (jumlahTiket > 3 && jumlahTiket <= 20) {
-                    hargaTiket = (int) (jumlahTiket * 300000 - 300000 * ((double) 5 / 100));
-                } else {
-                    hargaTiket = jumlahTiket * 300000;
-                }
-            }
+        deskripsiTugas = input.nextLine();
+        kodeMataKuliah = input.nextLine();
+        namaMataKuliah = input.nextLine();
+        pengampu = input.nextLine();
+        deadline = input.nextLine();
+        formatPenamaanTugas = input.nextLine();
+        tingkatKesulitan = Double.parseDouble(input.nextLine());
+        hariDeadline = Double.parseDouble(input.nextLine());
+        status = input.nextLine();
+        prioritas = tingkatKesulitan * (1.0 / hariDeadline);
+        if (prioritas > 3) {
+            status = "Penting! Anda harus mengerjakan tugas ini segera.";
         } else {
-            if (jenisTiket.equals("Reguler")) {
-                if (jumlahTiket > 50) {
-                    System.out.println("JumlahTiketTidakTersedia");
-                } else {
-                    if (jumlahTiket > 3 && jumlahTiket <= 50) {
-                        hargaTiket = (int) (jumlahTiket * 200000 - 200000 * ((double) 5 / 100));
-                    } else {
-                        hargaTiket = jumlahTiket * 200000;
-                    }
-                }
+            if (prioritas >= 1.5 && prioritas <= 3) {
+                status = "Tugas ini memiliki prioritas menengah.";
             } else {
-                if (jenisTiket.equals("Economy")) {
-                    if (jumlahTiket > 10) {
-                        System.out.println("JumlahTiketTidakTersedia");
-                    } else {
-                        if (jumlahTiket > 3 && jumlahTiket <= 10) {
-                            hargaTiket = (int) (jumlahTiket * 100000 - 100000 * ((double) 5 / 100));
-                        } else {
-                            hargaTiket = jumlahTiket * 100000;
-                        }
-                    }
+                if (prioritas < 1.5) {
+                    status = "Tugas ini relatif ringan, namun jangan tunda terlalu lama.";
                 }
             }
         }
-        System.out.println(namaKonser + "|" + tanggalKonser + "|" + jenisTiket + "|" + nomorTiket + "|" + jumlahTiket + "|" + hargaTiket);
+        System.out.println(deskripsiTugas + "|" + kodeMataKuliah + "|" + namaMataKuliah + "|" + pengampu + "|" + deadline + "|" + formatPenamaanTugas + "|" + tingkatKesulitan + "|" + hariDeadline + "|" + status + "|");
     }
 }
