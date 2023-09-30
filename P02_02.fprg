@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="SINTONG HUTAPEA"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-30 09:10:09 AM"/>
+        <attribute name="created" value="U0lOVE9ORyBIVVRBUEVBO01TSTsyMDIzLTA5LTMwOzA4OjEyOjU4IEFNOzI2MDM="/>
+        <attribute name="edited" value="U0lOVE9ORyBIVVRBUEVBO01TSTsyMDIzLTA5LTMwOzA5OjEwOjA5IEFNOzE7MjcwNg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="NmGd, AC, Lt, KtsTk, hasil" type="String" array="False" size=""/>
+            <declare name="KpsGd, JmBk, PgKpsGd" type="Integer" array="False" size=""/>
+            <input variable="NmGd"/>
+            <input variable="KpsGd"/>
+            <input variable="JmBk"/>
+            <input variable="AC"/>
+            <input variable="Lt"/>
+            <input variable="KtsTk"/>
+            <assign variable="PgKpsGd" expression="(JmBk/KpsGd)*100"/>
+            <if expression="PgKpsGd &gt;= 40">
+                <then>
+                    <assign variable="hasil" expression="&quot;Gudang Elite&quot;"/>
+                </then>
+                <else>
+                    <if expression="PgKpsGd &gt;= 25">
+                        <then>
+                            <assign variable="hasil" expression="&quot;Gudang Standar&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="PgKpsGd &lt; 25">
+                                <then>
+                                    <assign variable="hasil" expression="&quot;Gudang Perlu Peningkatan&quot;"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Informasi Gudang&quot;" newline="True"/>
+            <output expression="NmGd&amp; &quot;|&quot;&amp; KpsGd&amp; &quot;|&quot;&amp; JmBk&amp; &quot;|&quot;&amp; AC&amp; &quot;|&quot;&amp; Lt&amp; &quot;|&quot;&amp; KtsTk&amp; &quot;|&quot;&amp; PgKpsGd&amp; &quot;|&quot;&amp; hasil" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
