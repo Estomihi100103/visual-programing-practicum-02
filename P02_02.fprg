@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Lenovo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-30 06:19:56 PM"/>
+        <attribute name="created" value="TGVub3ZvO0RFU0tUT1AtNExSTTBOSzsyMDIzLTA5LTEyOzA4OjM3OjU0IFBNOzI5ODg="/>
+        <attribute name="edited" value="TGVub3ZvO0RFU0tUT1AtNExSTTBOSzsyMDIzLTA5LTMwOzA2OjE5OjU2IFBNOzU7MzEwMA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Nama, Lantai, Ketersediaan, AC, Rekomendasi" type="String" array="False" size=""/>
+            <declare name="Kapasitas, Jumlah, Skor" type="Integer" array="False" size=""/>
+            <input variable="Nama"/>
+            <input variable="Kapasitas"/>
+            <input variable="Jumlah"/>
+            <input variable="AC"/>
+            <input variable="Lantai"/>
+            <input variable="Ketersediaan"/>
+            <assign variable="Skor" expression="(Jumlah/Kapasitas)* 100"/>
+            <if expression="Skor &gt;= 40">
+                <then>
+                    <assign variable="Rekomendasi" expression="&quot;Gudang Perlu Peningkatan&quot;"/>
+                </then>
+                <else>
+                    <if expression="Skor&gt;= 25">
+                        <then>
+                            <assign variable="Rekomendasi" expression="&quot;Gudang Standar&quot;"/>
+                        </then>
+                        <else>
+                            <assign variable="Rekomendasi" expression="&quot;Gudang perlu peningkatan&quot;"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Informasi Gudang : &quot; &#13;&#10;&amp; Nama &amp; &quot; | &quot; &amp; Kapasitas &amp; &quot; | &quot; &amp; Jumlah &amp; &quot; | &quot; &amp; AC &amp; &quot; | &quot; &amp; Lantai &amp; &quot; | &quot; &amp; Ketersediaan &amp;&quot; | &quot; &amp; Skor &amp;&quot; | &quot; &amp;Rekomendasi" newline="False"/>
+        </body>
+    </function>
+</flowgorithm>
