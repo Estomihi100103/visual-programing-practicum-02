@@ -4,10 +4,10 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="Lenovo"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2023-09-30 06:19:24 PM"/>
+        <attribute name="saved" value="2023-09-30 09:12:27 PM"/>
         <attribute name="created" value="TGVub3ZvO0RFU0tUT1AtNExSTTBOSzsyMDIzLTA5LTI4OzA5OjAyOjEwIFBNOzI5ODA="/>
         <attribute name="edited" value="TGVub3ZvO0RFU0tUT1AtNExSTTBOSzsyMDIzLTA5LTI4OzA5OjAyOjE2IFBNOzE7TGVub3ZvO0RFU0tUT1AtNExSTTBOSzsyMDIzLTA5LTEyOzA4OjEwOjA1IFBNO1R1dG9yLmZwcmc7NzIwNg=="/>
-        <attribute name="edited" value="TGVub3ZvO0RFU0tUT1AtNExSTTBOSzsyMDIzLTA5LTMwOzA2OjE5OjI0IFBNOzI7MzA5Mg=="/>
+        <attribute name="edited" value="TGVub3ZvO0RFU0tUT1AtNExSTTBOSzsyMDIzLTA5LTMwOzA5OjEyOjI3IFBNOzQ7MzA5Mw=="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -40,7 +40,7 @@
                     </if>
                 </else>
             </if>
-            <output expression="&quot;Prioritas: &quot; &amp;ToFixed(Prioritas, 2) &amp;&quot; | &quot; &amp;NIM &amp;&quot; | &quot; &amp;Subjek &amp;&quot; | &quot; &amp;Nama &amp;&quot; | &quot;&amp;Waktu &amp; &quot; | &quot; &amp;Penamaan &amp;&quot; | &quot; &amp;Status &amp; &quot;|&quot; &amp; Rekomendasi" newline="True"/>
+            <output expression="&quot;Prioritas: &quot; &amp;ToFixed(Prioritas, 2) &amp; Judul &amp;&quot; | &quot; &amp;NIM &amp;&quot; | &quot; &amp;Subjek &amp;&quot; | &quot; &amp;Nama &amp;&quot; | &quot;&amp;Waktu &amp; &quot; | &quot; &amp;Penamaan &amp;&quot; | &quot; &amp;Status &amp; &quot;|&quot; &amp; Rekomendasi" newline="True"/>
         </body>
     </function>
 </flowgorithm>

@@ -3,7 +3,7 @@
 import java.util.*;
 import java.lang.Math;
 
-class P02_02 {
+class P02_01 {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -30,11 +30,10 @@ class P02_02 {
                 rekomendasi = "Tugas ini realtif ringan, namun jangan tunda terlalu lama";
             }
         }
-        System.out.println("Prioritas: " + toFixed(prioritas,2) + " | " + nIM + " | " + subjek + " | " + nama + " | " + waktu + " | " + penamaan + " | " + status + "|" + rekomendasi);
+        System.out.println("Prioritas: " + toFixed(prioritas,2) + judul + " | " + nIM + " | " + subjek + " | " + nama + " | " + waktu + " | " + penamaan + " | " + status + "|" + rekomendasi);
     }
     
     private static String toFixed(double value, int digits) {
         return String.format("%." + digits + "f", value);
     }
 }
-
