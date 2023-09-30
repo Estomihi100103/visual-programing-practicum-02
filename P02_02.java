@@ -1,1 +1,1 @@
-//NIM -Nama
+//12S23046 -Anastasya
