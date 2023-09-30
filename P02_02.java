@@ -1,4 +1,4 @@
-//12S23010 - Tiffani Rumiris Br Butar-Butar
+//12S23010 - Tiffani Rumiris Br Butar-Butar 
 import java.util.*;
 import java.lang.Math;
 
