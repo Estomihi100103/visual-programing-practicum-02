@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Rache"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-28 09:18:54 PM"/>
+        <attribute name="created" value="UmFjaGU7TEFQVE9QLUdCNkZCOUtROzIwMjMtMDktMjg7MDg6MzM6MDggUE07MjgyNA=="/>
+        <attribute name="edited" value="UmFjaGU7TEFQVE9QLUdCNkZCOUtROzIwMjMtMDktMjg7MDk6MDg6MzUgUE07MTtGcmFuayBOaXJveTtGUkFOSzsyMDIzLTA5LTI4OzA4LjA0LjA5IFBNO3Jla29tZW5kYXNpWzFdLmZwcmc7NzYyOQ=="/>
+        <attribute name="edited" value="UmFjaGU7TEFQVE9QLUdCNkZCOUtROzIwMjMtMDktMjg7MDk6MTg6NTQgUE07MTsyOTM3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="DeskripsiTugas" type="String" array="False" size=""/>
+            <declare name="KodeMataKuliah" type="String" array="False" size=""/>
+            <declare name="MataKuliah" type="String" array="False" size=""/>
+            <declare name="DosenPengampu" type="String" array="False" size=""/>
+            <declare name="Deadline" type="String" array="False" size=""/>
+            <declare name="NIMNamaMatkul" type="String" array="False" size=""/>
+            <declare name="TingkatKesulitan" type="Real" array="False" size=""/>
+            <declare name="HariHinggaDeadline" type="Real" array="False" size=""/>
+            <declare name="Status" type="String" array="False" size=""/>
+            <declare name="Prioritas" type="Real" array="False" size=""/>
+            <declare name="Hasil" type="String" array="False" size=""/>
+            <input variable="DeskripsiTugas"/>
+            <input variable="KodeMataKuliah"/>
+            <input variable="MataKuliah"/>
+            <input variable="DosenPengampu"/>
+            <input variable="Deadline"/>
+            <input variable="NIMNamaMatkul"/>
+            <input variable="TingkatKesulitan"/>
+            <input variable="HariHinggaDeadline"/>
+            <input variable="Status"/>
+            <assign variable="Prioritas" expression="TingkatKesulitan*(1.0/HariHinggaDeadline)"/>
+            <output expression="&quot;Prioritas :&quot; &amp;Prioritas" newline="True"/>
+            <if expression="Prioritas &gt; 3">
+                <then>
+                    <assign variable="Hasil" expression="&quot;Penting! Anda harus mengerjakan tugas ini segera.&quot;"/>
+                </then>
+                <else>
+                    <if expression="Prioritas &gt;=1.5 and prioritas &lt;=3">
+                        <then>
+                            <assign variable="Hasil" expression="&quot;Tugas ini memiliki prioritas menengah.&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="Prioritas &lt; 1.5">
+                                <then>
+                                    <assign variable="Hasil" expression="&quot;Tugas ini relatif ringan, namun jangan tunda terlalu lama.&quot;"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="DeskripsiTugas &amp;&quot;|&quot;&amp; KodeMataKuliah &amp;&quot;|&quot;&amp; MataKuliah &amp;&quot;|&quot;&amp; DosenPengampu &amp;&quot;|&quot;&amp; Deadline &amp;&quot;|&quot;&amp; NIMNamaMatkul &amp;&quot;|&quot;&amp; TingkatKesulitan &amp;&quot;|&quot;&amp; HariHinggaDeadline &amp;&quot;|&quot;&amp; Status &amp;&quot;|&quot;&amp; Hasil" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
