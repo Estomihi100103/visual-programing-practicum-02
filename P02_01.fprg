@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Kevin Gultom"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-01 02:18:27 PM"/>
+        <attribute name="created" value="S2V2aW4gR3VsdG9tO09NRU47MjAyMy0xMC0wMTswMTo1Njo1MCBQTTsyNzQ2"/>
+        <attribute name="edited" value="S2V2aW4gR3VsdG9tO09NRU47MjAyMy0xMC0wMTswMjoxODoyNyBQTTsxOzI4NTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Tema, NIM, Subjek, Dosen, Waktu, PenamaanFileTugas, Status, RekomendasiTugas" type="String" array="False" size=""/>
+            <declare name="TingkatKesulitan, Hari" type="Integer" array="False" size=""/>
+            <declare name="Prioritas" type="Real" array="False" size=""/>
+            <input variable="Tema"/>
+            <input variable="NIM"/>
+            <input variable="Subjek"/>
+            <input variable="Dosen"/>
+            <input variable="Waktu"/>
+            <input variable="PenamaanFileTugas"/>
+            <input variable="TingkatKesulitan"/>
+            <input variable="Hari"/>
+            <input variable="Status"/>
+            <assign variable="Prioritas" expression="TingkatKesulitan * ( 1.0/ Hari)"/>
+            <if expression="Prioritas &gt; 3">
+                <then>
+                    <assign variable="RekomendasiTugas" expression="&quot;Penting! Anda harus mengerjakan tugas ini segera.&quot;"/>
+                </then>
+                <else>
+                    <if expression="Prioritas &gt;1.5">
+                        <then>
+                            <assign variable="RekomendasiTugas" expression="&quot;Tugas ini memiliki prioritas menengah.&quot;"/>
+                        </then>
+                        <else>
+                            <assign variable="RekomendasiTugas" expression="&quot;Tugas ini relatif ringan, namun jangan tunda terlalu lama.&quot;"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Prioritas : &quot; &amp;ToFixed(Prioritas,2)" newline="True"/>
+            <output expression="Tema &amp; &quot;|&quot; &#13;&#10;&amp;NIM &amp;&quot;|&quot;&#13;&#10;&amp;Subjek &amp;&quot;|&quot;&#13;&#10;&amp;Dosen &amp;&quot;|&quot;&#13;&#10;&amp;Waktu &amp;&quot;|&quot;&#13;&#10;&amp;PenamaanFileTugas&amp;&quot;|&quot;&#13;&#10;&amp;Status &amp;&quot;|&quot;&#13;&#10;&amp;RekomendasiTugas" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

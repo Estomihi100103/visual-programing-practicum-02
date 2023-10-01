@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Kevin Gultom"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-01 01:55:40 PM"/>
+        <attribute name="created" value="S2V2aW4gR3VsdG9tO09NRU47MjAyMy0wOS0yOTswODoyMTo0NiBQTTsyNzY4"/>
+        <attribute name="edited" value="S2V2aW4gR3VsdG9tO09NRU47MjAyMy0xMC0wMTswMTo1NTo0MCBQTTszOzI4NTQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="NamaGudang, AC, Lantai, KetersediaanTeknologi, Rekom" type="String" array="False" size=""/>
+            <declare name="KapasitasGudang, JumlahBuku, Skor" type="Integer" array="False" size=""/>
+            <input variable="NamaGudang"/>
+            <input variable="KapasitasGudang"/>
+            <input variable="JumlahBuku"/>
+            <input variable="AC"/>
+            <input variable="Lantai"/>
+            <input variable="KetersediaanTeknologi"/>
+            <assign variable="Skor" expression="(JumlahBuku/KapasitasGudang*100)"/>
+            <if expression="Skor &gt;= 40">
+                <then>
+                    <assign variable="Rekom" expression="&quot;Gudang Elite&quot;"/>
+                </then>
+                <else>
+                    <if expression="Skor &gt;= 25">
+                        <then>
+                            <assign variable="Rekom" expression="&quot;Gudang Standart&quot;"/>
+                        </then>
+                        <else>
+                            <assign variable="Rekom" expression="&quot;Gedung Perlu Peningkatan&quot;"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="NamaGudang &amp; &quot;|&quot; &amp;&#13;&#10;KapasitasGudang &amp; &quot;|&quot; &amp;&#13;&#10;JumlahBuku &amp; &quot;|&quot; &amp;&#13;&#10;AC &amp; &quot;|&quot; &amp;&#13;&#10;Lantai &amp; &quot;|&quot; &amp;&#13;&#10;KetersediaanTeknologi &amp; &quot;|&quot; &amp;&#13;&#10;Skor &amp; &quot;|&quot; &amp;&#13;&#10;Rekom" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
