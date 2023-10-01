@@ -1,9 +1,8 @@
 // 12S23028 - Daniel Situmorang
-
 import java.util.*;
 import java.lang.Math;
 
-class P02_01 {
+class P01_01 {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {

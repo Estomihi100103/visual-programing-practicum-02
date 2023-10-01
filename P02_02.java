@@ -1,5 +1,4 @@
 // 12S23028 - Daniel Situmorang
-
 import java.util.*;
 import java.lang.Math;
 
