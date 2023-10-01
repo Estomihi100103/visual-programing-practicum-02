@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MATTHEW"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-01 02:23:34 PM"/>
+        <attribute name="created" value="TUFUVEhFVztNU0k7MjAyMy0wOS0xMjswODozMDo1MiBQTTsyMDUy"/>
+        <attribute name="edited" value="TUFUVEhFVztNU0k7MjAyMy0xMC0wMTswMjoyMzozNCBQTTs0OzIxNDk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="NamaGudang, KapasitasGudang, JumlahBukuSaatIni, AC, Lantai, KetersediaanTeknologi" type="String" array="False" size=""/>
+            <output expression="&quot;NamaGudang&quot;" newline="True"/>
+            <input variable="NamaGudang"/>
+            <output expression="&quot;KapasitasGudang&quot;" newline="True"/>
+            <input variable="KapasitasGudang"/>
+            <output expression="&quot;JumlahBukuSaatIni&quot;" newline="True"/>
+            <input variable="JumlahBukuSaatIni"/>
+            <output expression="&quot;AC&quot;" newline="True"/>
+            <input variable="AC"/>
+            <output expression="&quot;Lantai&quot;" newline="True"/>
+            <input variable="Lantai"/>
+            <output expression="&quot;KetersediaanTeknologi&quot;" newline="True"/>
+            <input variable="KetersediaanTeknologi"/>
+            <if expression="SkorGudang &gt;=40">
+                <then>
+                    <assign variable="Hasil" expression="&quot;Gudang Elite&quot;"/>
+                </then>
+                <else>
+                    <if expression="SkorGudang &gt;=25">
+                        <then>
+                            <assign variable="Hasil" expression="&quot;Gudang Standar&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="SkorGudang &gt;=25">
+                                <then>
+                                    <assign variable="Hasil" expression="&quot;Gudang Perlu Peringkatan&quot;"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="NamaGudang &amp;&quot;|&quot; &amp;KapasitasGudang &amp;&quot;|&quot; &amp;JumlahBukuSaatIni &amp;&quot;|&quot; &amp;AC &amp;&quot;|&quot; &amp;Lantai &amp;&quot;|&quot; &amp;KetersediaanTeknologi" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
