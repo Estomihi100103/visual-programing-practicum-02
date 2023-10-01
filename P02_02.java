@@ -1,8 +1,8 @@
-//12S23045 -Chintya Reginauli Rajagukguk
+// 12S23045 - Chintya Reginauli Rajagukguk
 import java.util.*;
 import java.lang.Math;
 
-class P02_02.java {
+class P02_02 {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
