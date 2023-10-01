@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Eska Natasia Silaen"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-30 04:35:10 AM"/>
+        <attribute name="created" value="RXNrYSBOYXRhc2lhIFNpbGFlbjtMQVBUT1AtNUkyTDY0Nko7MjAyMy0wOS0yOTswMjo0Mzo1MiBBTTs0MDI4"/>
+        <attribute name="edited" value="RXNrYSBOYXRhc2lhIFNpbGFlbjtMQVBUT1AtNUkyTDY0Nko7MjAyMy0wOS0zMDswNDozNToxMCBBTTsyOzQxMjY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="SelamatDatangdiTokoSepAn" type="String" array="False" size=""/>
+            <declare name="NamaGudang, AC, Lantai, KetersediaanTeknologi" type="String" array="False" size=""/>
+            <declare name="JumlahBukusaatini, KapasitasGudang" type="Integer" array="False" size=""/>
+            <declare name="skor" type="Real" array="False" size=""/>
+            <declare name="GudangElite, hasil1, hasil2, hasil3" type="String" array="False" size=""/>
+            <output expression="&quot;HAI Selamat Datang di Toko SepAn&quot;" newline="True"/>
+            <output expression="&quot;Masukkan Nama Gudang&quot;" newline="True"/>
+            <input variable="namagudang"/>
+            <output expression="&quot;Masukkan Kapasitas Gudang&quot;" newline="True"/>
+            <input variable="kapasitasgudang"/>
+            <output expression="&quot;Masukkan AC&quot;" newline="True"/>
+            <input variable="ac"/>
+            <output expression="&quot;Masukkan Lantai&quot;" newline="True"/>
+            <input variable="lantai"/>
+            <output expression="&quot;Ketersediaan Teknologi&quot;" newline="True"/>
+            <input variable="ketersediaanteknologi"/>
+            <output expression="&quot;Jumlah Buku Saat Ini&quot;" newline="True"/>
+            <input variable="jumlahbukusaatini"/>
+            <output expression="&quot;Skor&quot;" newline="True"/>
+            <input variable="skor"/>
+            <output expression="&quot;Nama Gudang : &quot;&amp;namagudang" newline="True"/>
+            <output expression="&quot;Kapasitas Gudang : &quot;&amp;kapasitasgudang" newline="True"/>
+            <output expression="&quot;AC : &quot;&amp;ac" newline="True"/>
+            <output expression="&quot;Lantai : &quot;&amp;lantai" newline="True"/>
+            <output expression="&quot;Ketersediaan Teknologi : &quot;&amp;ketersediaanteknologi" newline="True"/>
+            <output expression="&quot;Jumlah Buku Saat Ini : &quot;&amp;jumlahbukusaatini" newline="True"/>
+            <if expression="skor&gt;=40">
+                <then>
+                    <assign variable="hasil1" expression="&quot;Gudang Elite&quot;"/>
+                </then>
+                <else>
+                    <if expression="skor&gt;=25">
+                        <then>
+                            <assign variable="hasil1" expression="&quot;Gudang Standar&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="skor&lt;25">
+                                <then>
+                                    <assign variable="hasil1" expression="&quot;Gudang Perlu Peningkatan&quot;"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="namagudang&amp;&quot;|&quot;&amp;kapasitasgudang&amp;&quot;|&quot;&amp;jumlahbukusaatini&amp;&quot;|&quot;&amp;ac&amp;&quot;|&quot;&amp;lantai&amp;&quot;|&quot;&amp;ketersediaanteknologi" newline="True"/>
+            <output expression="&quot;Terima Kasih&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
