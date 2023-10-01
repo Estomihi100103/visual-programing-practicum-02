@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="USER"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-01 02:49:55 PM"/>
+        <attribute name="created" value="VVNFUjtMQVBUT1AtODBPT0w2N087MjAyMy0wOS0yOTswMToxNDoxMSBQTTsyNjMz"/>
+        <attribute name="edited" value="VVNFUjtMQVBUT1AtODBPT0w2N087MjAyMy0xMC0wMTswMjo0OTo1NSBQTTszOzI3NDI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nama, ac, lantai, ketersediaan, kategori" type="String" array="False" size=""/>
+            <declare name="kapasitas, jumlahbuku" type="Integer" array="False" size=""/>
+            <declare name="skor" type="Integer" array="False" size=""/>
+            <input variable="nama"/>
+            <input variable="kapasitas"/>
+            <input variable="jumlahbuku"/>
+            <input variable="ac"/>
+            <input variable="lantai"/>
+            <input variable="ketersediaan"/>
+            <input variable="skor"/>
+            <assign variable="kapasitas" expression="jumlahbuku/kapasitas*100"/>
+            <if expression="skor&gt;=40">
+                <then>
+                    <assign variable="kategori" expression="&quot;Gudang Elite&quot;"/>
+                </then>
+                <else>
+                    <if expression="skor&gt;=25">
+                        <then>
+                            <assign variable="kategori" expression="&quot;Gudang Standar&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="skor&lt;25">
+                                <then>
+                                    <assign variable="kategori" expression="&quot;Perlu Peningkatan&quot;"/>
+                                </then>
+                                <else>
+                                    <assign variable="kategori" expression="&quot;&quot;"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="kapasitas&amp;&quot;|&quot;&amp;nama&amp;&quot;|&quot;&amp;kapasitas&amp;&quot;|&quot;&amp;jumlahbuku&amp;&quot;|&quot;&amp;ac&amp;&quot;|&quot;&amp;lantai&amp;&quot;|&quot;&amp;ketersediaan&amp;&quot;|&quot;&amp;kategori" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
