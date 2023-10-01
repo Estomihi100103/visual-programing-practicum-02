@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="HP"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-01 01:29:16 PM"/>
+        <attribute name="created" value="SFA7WU9MQU5EQVNBUkFHSUg7MjAyMy0wOS0xMjswODo1NjoyNSBBTTsyNDU3"/>
+        <attribute name="edited" value="SFA7WU9MQU5EQVNBUkFHSUg7MjAyMy0xMC0wMTsxMjo1ODo0OSBQTTszOzI1NzU="/>
+        <attribute name="edited" value="VFVGIEdBTUlORztMQVBUT1AtN0RMRU43VUU7MjAyMy0xMC0wMTswMToyOToxNiBQTTsxOzMxNTA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="namakonser" type="String" array="False" size=""/>
+            <declare name="tanggalkonser" type="String" array="False" size=""/>
+            <declare name="jenistiket" type="String" array="False" size=""/>
+            <declare name="nomortiket" type="Integer" array="False" size=""/>
+            <declare name="hargatiket" type="Integer" array="False" size=""/>
+            <declare name="jumlahtiket" type="Integer" array="False" size=""/>
+            <output expression="&quot;nama konser:&quot;" newline="True"/>
+            <input variable="namakonser"/>
+            <output expression="&quot;tanggal konser:&quot;" newline="True"/>
+            <input variable="tanggalkonser"/>
+            <output expression="&quot;jenis tiket:&quot;" newline="True"/>
+            <input variable="jenistiket"/>
+            <output expression="&quot;nomor tiket:&quot;" newline="True"/>
+            <input variable="nomortiket"/>
+            <output expression="&quot;harga tiket:&quot;" newline="True"/>
+            <input variable="hargatiket"/>
+            <output expression="&quot;jumlah tiket:&quot;" newline="True"/>
+            <input variable="jumlahtiket"/>
+            <output expression="&quot;Nama konser :&quot;&amp;namakonser" newline="True"/>
+            <output expression="&quot;Tanggal konser:&quot;&amp;tanggalkonser" newline="True"/>
+            <output expression="&quot;Jenis tiket:&quot;&amp;jenistiket" newline="True"/>
+            <output expression="&quot;nomor tiket:&quot;&amp;nomortiket" newline="True"/>
+            <output expression="&quot;Harga tiket:&quot;&amp;hargatiket" newline="True"/>
+            <output expression="&quot;Jumlah tiket:&quot;&amp;jumlahtiket" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
