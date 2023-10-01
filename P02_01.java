@@ -1,3 +1,5 @@
+// 12S23012 - Genesis Tombak Dapot Tua Panjaitan
+
 import java.util.*;
 import java.lang.Math;
 
@@ -19,7 +21,6 @@ class P02_01 {
         hariDeadline = input.nextInt();
         status = input.nextLine();
         prioritas = tingkatKesulitan * (1.0 / hariDeadline);
-        System.out.println("Prioritas: " + toFixed(prioritas,2));
         if (prioritas > 3) {
             status2 = "Penting! Anda harus mengerjakan tugas ini segera.";
         } else {
@@ -28,9 +29,12 @@ class P02_01 {
             } else {
                 if (prioritas < 1.5) {
                     status2 = "Tugas ini relatif ringan, namun jangan tunda terlalu lama.";
+                } else {
+                    status2 = " ";
                 }
             }
         }
+        System.out.println("Prioritas: " + toFixed(prioritas,2));
         System.out.println(program + "|" + kode + "|" + matkul + "|" + dosen + "|" + tanggal + "|" + format + "|" + status + "|" + status2);
     }
     

@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="genes"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2023-09-30 03:10:01 PM"/>
+        <attribute name="saved" value="2023-10-01 02:33:36 PM"/>
         <attribute name="created" value="Z2VuZXM7R0VORVNJU19QOzIwMjMtMDktMjg7MDg6MDI6NTIgUE07MjUxOA=="/>
-        <attribute name="edited" value="Z2VuZXM7R0VORVNJU19QOzIwMjMtMDktMzA7MDM6MTA6MDEgUE07OTsyNjE1"/>
+        <attribute name="edited" value="Z2VuZXM7R0VORVNJU19QOzIwMjMtMTAtMDE7MDI6MzM6MzYgUE07MTE7MjY1OA=="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -34,7 +34,9 @@
                                 <then>
                                     <assign variable="skor2" expression="&quot;Gudang Perlu Peningkatan&quot;"/>
                                 </then>
-                                <else/>
+                                <else>
+                                    <assign variable="skor2" expression="&quot; &quot;"/>
+                                </else>
                             </if>
                         </else>
                     </if>

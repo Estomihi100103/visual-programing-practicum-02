@@ -1,4 +1,5 @@
 // 12S23012 - Genesis Tombak Dapot Tua Panjaitan
+
 import java.util.*;
 import java.lang.Math;
 
@@ -24,6 +25,8 @@ class P02_02 {
             } else {
                 if (skor < 25) {
                     skor2 = "Gudang Perlu Peningkatan";
+                } else {
+                    skor2 = " ";
                 }
             }
         }
