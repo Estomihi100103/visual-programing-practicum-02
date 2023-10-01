@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Frima Guna Hutajulu"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-01 01:22:17 PM"/>
+        <attribute name="created" value="RnJpbWEgR3VuYSBIdXRhanVsdTtQT1BQWTsyMDIzLTA5LTEyOzA4OjQ4OjQxIFBNOzM1MDA="/>
+        <attribute name="edited" value="RnJpbWEgR3VuYSBIdXRhanVsdTtQT1BQWTsyMDIzLTEwLTAxOzAxOjIyOjE3IFBNOzY7MzU5MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="NamaGudang, s" type="String" array="False" size=""/>
+            <declare name="kapasitas, x" type="Integer" array="False" size=""/>
+            <declare name="jumlah" type="Integer" array="False" size=""/>
+            <declare name="AC" type="String" array="False" size=""/>
+            <declare name="Lantai" type="String" array="False" size=""/>
+            <declare name="KetersediaanTeknologi" type="String" array="False" size=""/>
+            <input variable="NamaGudang"/>
+            <input variable="kapasitas"/>
+            <input variable="jumlah"/>
+            <input variable="AC"/>
+            <input variable="Lantai"/>
+            <input variable="KetersediaanTeknologi"/>
+            <assign variable="x" expression="(jumlah/kapasitas)*100"/>
+            <if expression="x&gt;=40">
+                <then>
+                    <assign variable="s" expression="&quot;Gudang Elite&quot;"/>
+                </then>
+                <else>
+                    <if expression="x&lt;40 &amp;&amp; x&gt;=25">
+                        <then>
+                            <assign variable="s" expression="&quot;Gudang Standar&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="x&lt;25">
+                                <then>
+                                    <assign variable="s" expression="&quot;Gudang Perlu Peningkatan&quot;"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Informasi Gudang: &quot;" newline="True"/>
+            <output expression="NamaGudang &amp;&quot;|&quot;&amp; kapasitas &amp;&quot;|&quot; &amp;jumlah &amp;&quot;|&quot;&amp; AC &amp;&quot;|&quot;&amp; Lantai &amp;&quot;|&quot;&amp; KetersediaanTeknologi&amp;&quot;|&quot; &amp;x &amp;&quot;|&quot; &amp;&quot;|&quot; &amp;s" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
