@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-01 03:03:41 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtQkNCMzU1T007MjAyMy0wOS0xMjswODowNDo1NyBQTTsyNjI0"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtQkNCMzU1T007MjAyMy0wOS0yODswOTowNzoxNCBQTTsyO0ZyYW5rIE5pcm95O0ZSQU5LOzIwMjMtMDktMjg7MDguMDQuMDkgUE07cmVrb21lbmRhc2lbMV0uZnByZzs3NDMx"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtQkNCMzU1T007MjAyMy0xMC0wMTswMzowMzo0MSBQTTs4OzI3MTY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="DeskripsiTugas" type="String" array="False" size=""/>
+            <output expression="&quot;Deskripsi Tugas&quot;" newline="True"/>
+            <input variable="deskripsitugas"/>
+            <declare name="KodeMataKuliah" type="String" array="False" size=""/>
+            <output expression="&quot;Kode Mata Kuliah&quot;" newline="True"/>
+            <input variable="KodeMataKuliah"/>
+            <declare name="NamaMataKuliah" type="String" array="False" size=""/>
+            <output expression="&quot;Nama MatKul&quot;" newline="True"/>
+            <input variable="NamaMataKuliah"/>
+            <declare name="Pengampu" type="String" array="False" size=""/>
+            <output expression="&quot;Nama Dosen Pengampu&quot;" newline="True"/>
+            <input variable="Pengampu"/>
+            <declare name="Deadline" type="String" array="False" size=""/>
+            <output expression="&quot;Deadline&quot;" newline="True"/>
+            <input variable="Deadline"/>
+            <declare name="FormatPenamaanTugas" type="String" array="False" size=""/>
+            <output expression="&quot;Format Penamaan Tugas&quot;" newline="True"/>
+            <input variable="FormatPenamaanTugas"/>
+            <declare name="Tingkatkesulitan" type="Integer" array="False" size=""/>
+            <output expression="&quot;Tingkat kesulitan&quot;" newline="True"/>
+            <input variable="Tingkatkesulitan"/>
+            <declare name="Hari" type="Integer" array="False" size=""/>
+            <output expression="&quot;Hari&quot;" newline="True"/>
+            <input variable="Hari"/>
+            <declare name="Status" type="String" array="False" size=""/>
+            <output expression="&quot;Status&quot;" newline="True"/>
+            <input variable="Status"/>
+            <declare name="prioritas" type="Real" array="False" size=""/>
+            <declare name="hasil1, hasil2, hasil3" type="String" array="False" size=""/>
+            <assign variable="prioritas" expression="Tingkatkesulitan * (1.0/hari)"/>
+            <output expression="&quot;Prioritas : &quot; &amp;prioritas" newline="True"/>
+            <if expression="prioritas &gt; 3">
+                <then>
+                    <assign variable="hasil1" expression="&quot;Penting! Anda harus mengerjakan tugas ini segera.&quot;"/>
+                </then>
+                <else>
+                    <if expression="prioritas &gt;= 1.5 and prioritas &lt;= 3">
+                        <then>
+                            <assign variable="hasil1" expression="&quot;Tugas ini memiliki prioritas menengah.&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="prioritas &lt; 1.5">
+                                <then>
+                                    <assign variable="hasil1" expression="&quot;Tugas ini relatif ringan, namun jangan tunda terlalu lama.&quot;"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="Deskripsitugas &amp;&quot;|&quot;&amp; Kodematakuliah &amp;&quot;|&quot;&amp; Namamatakuliah &amp;&quot;|&quot;&amp; Pengampu &amp;&quot;|&quot;&amp; Deadline &amp;&quot;|&quot;&amp; Formatpenamaantugas &amp;&quot;|&quot;&amp; Tingkatkesulitan &amp;&quot;|&quot;&amp; hari &amp;&quot;|&quot;&amp; status &amp;&quot;|&quot;&amp; hasil1" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

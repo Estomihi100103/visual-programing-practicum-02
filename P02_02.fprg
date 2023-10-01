@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-01 03:05:56 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtQkNCMzU1T007MjAyMy0wOS0yOTswMToxNDowOSBQTTsyNjIz"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtQkNCMzU1T007MjAyMy0wOS0yOTswMToxODozOCBQTTsyO0FTVVM7TEFQVE9QLUJDQjM1NU9NOzIwMjMtMDktMTI7MDk6MTU6MTAgUE07MTJTMjMwMjMgTGVubmkgRmVicml5YW5pIC0gUHJhayAwMy5mcHJnOzg1MDY="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtQkNCMzU1T007MjAyMy0wOS0yOTswMToyMToyMCBQTTsxO0FTVVM7TEFQVE9QLUJDQjM1NU9NOzIwMjMtMDktMTI7MDg6MDQ6NTcgUE07MTJTMjMwMjMgTGVubmkgRmVicml5YW5pIC0gUHJhayAwMy5mcHJnOzg0OTg="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtQkNCMzU1T007MjAyMy0xMC0wMTswMzowNTo1NiBQTTszOzI3MTk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="NamaGudang" type="String" array="False" size=""/>
+            <output expression="&quot;Masukkan Nama Gudang&quot;" newline="True"/>
+            <input variable="NamaGudang"/>
+            <declare name="KapasitasGudang" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan Kapasitas Gudang&quot;" newline="True"/>
+            <input variable="KapasitasGudang"/>
+            <declare name="JumlahBukuSaatIni" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan Jumlah Buku Saat Ini&quot;" newline="True"/>
+            <input variable="JumlahBukuSaatIni"/>
+            <declare name="AC" type="String" array="False" size=""/>
+            <output expression="&quot;AC?&quot;" newline="True"/>
+            <input variable="AC"/>
+            <declare name="Lantai" type="String" array="False" size=""/>
+            <output expression="&quot;Masukkan Jenis Lantai&quot;" newline="True"/>
+            <input variable="Lantai"/>
+            <declare name="KetersediaanTeknologi" type="String" array="False" size=""/>
+            <output expression="&quot;Bagaimana Ketersediaan Teknologi?&quot;" newline="True"/>
+            <input variable="KetersediaanTeknologi"/>
+            <declare name="skor" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan skor&quot;" newline="True"/>
+            <input variable="skor"/>
+            <declare name="hasil1" type="String" array="False" size=""/>
+            <if expression="skor &gt;= 40">
+                <then>
+                    <assign variable="hasil1" expression="&quot;Gudang Elite&quot;"/>
+                </then>
+                <else>
+                    <if expression="skor &gt;= 25">
+                        <then>
+                            <assign variable="hasil1" expression="&quot;Gudang Standar&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="skor &lt; 25">
+                                <then>
+                                    <assign variable="hasil1" expression="&quot;Gudang perlu peningkatan&quot;"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="NamaGudang&amp;&quot;|&quot;&amp; kapasitasGudang &amp;&quot;|&quot;&amp; JumlahBukuSaatIni &amp;&quot;|&quot;&amp; AC &amp;&quot;|&quot;&amp; Lantai &amp;&quot;|&quot;&amp; KetersediaanTeknologi &amp;&quot;|&quot;&amp; hasil1" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
