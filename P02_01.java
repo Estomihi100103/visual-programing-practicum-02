@@ -7,30 +7,36 @@ class P02 {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        String namakonser;
-        String tanggalkonser;
-        String jenistiket;
-        int nomortiket;
-        int hargatiket;
-        int jumlahtiket;
+        String program, kode, matkul, namadosen, tanggal, format, hasil1, hasil2, hasil3;
+        double tingkatkesulitan, harideadline, prioritas;
+        String status, kerjakansegera, prioritasmenengah;
 
-        System.out.println("nama konser:");
-        namakonser = input.nextLine();
-        System.out.println("tanggal konser:");
-        tanggalkonser = input.nextLine();
-        System.out.println("jenis tiket:");
-        jenistiket = input.nextLine();
-        System.out.println("nomor tiket:");
-        nomortiket = input.nextInt();
-        System.out.println("harga tiket:");
-        hargatiket = input.nextInt();
-        System.out.println("jumlah tiket:");
-        jumlahtiket = input.nextInt();
-        System.out.println("Nama konser :" + namakonser);
-        System.out.println("Tanggal konser:" + tanggalkonser);
-        System.out.println("Jenis tiket:" + jenistiket);
-        System.out.println("nomor tiket:" + nomortiket);
-        System.out.println("Harga tiket:" + hargatiket);
-        System.out.println("Jumlah tiket:" + jumlahtiket);
+        program = input.nextLine();
+ 8        kode = input.nextLine();
+        matkul = input.nextLine();
+        namadosen = input.nextLine();
+        tanggal = input.nextLine();
+        format = input.nextLine();
+        tingkatkesulitan = input.nextDouble();
+        harideadline = input.nextDouble();
+        status = input.nextLine();
+        prioritas = tingkatkesulitan * (1.0 / harideadline);
+        if (prioritas > 3) {
+            hasil1 = "kerjakansegera";
+        } else {
+            if (prioritas < 3 && prioritas > 1.5) {
+                hasil2 = "prioritasmenengah";
+            } else {
+                if (prioritas < 1.5) {
+                    hasil3 = "ez";
+                }
+            }
+        }
+        System.out.println("prioritas :" + toFixed(prioritas,2));
+        System.out.println(program + "|" + kode + "|" + matkul + "|" + namadosen + "|" + tanggal + "|" + format + "|" + tingkatkesulitan + "|" + harideadline + "|" + status + "|");
+    }
+    
+    private static String toFixed(double value, int digits) {
+        return String.format("%." + digits + "f", value);
     }
 }
