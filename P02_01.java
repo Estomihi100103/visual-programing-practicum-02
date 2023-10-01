@@ -1,9 +1,9 @@
-// 12S23046-Anastasya Tabita Blessing Siahaan
+//12S23046 -Anastasya Tabita Blessing Siahaan
 
 import java.util.*;
 import java.lang.Math;
 
-class P02_01 {
+class P02 {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -39,3 +39,4 @@ class P02_01 {
         return String.format("%." + digits + "f", value);
     }
 }
+
