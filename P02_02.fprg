@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="Early nathalia onal"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2023-10-01 10:50:01 AM"/>
+        <attribute name="saved" value="2023-10-01 02:28:42 PM"/>
         <attribute name="created" value="RWFybHkgbmF0aGFsaWEgb25hbDtMQVBUT1AtQk9VQTRCRE07MjAyMy0wOS0xMjswOTowMDowNiBQTTs0MTc4"/>
-        <attribute name="edited" value="RWFybHkgbmF0aGFsaWEgb25hbDtMQVBUT1AtQk9VQTRCRE07MjAyMy0xMC0wMTsxMDo1MDowMSBBTTs4OzQyNjA="/>
+        <attribute name="edited" value="RWFybHkgbmF0aGFsaWEgb25hbDtMQVBUT1AtQk9VQTRCRE07MjAyMy0xMC0wMTswMjoyODo0MiBQTTs5OzQyODc="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -19,26 +19,18 @@
             <input variable="Ac"/>
             <input variable="lantai"/>
             <input variable="ketersediaanteknologi"/>
-            <input variable="kualitasgudang"/>
-            <input variable="skorgudang"/>
             <assign variable="skorgudang" expression="(jumlahbuku/kapasitasgudang)*100"/>
             <if expression="skorgudang&gt;=40">
                 <then>
                     <assign variable="kualitasgudang" expression="&quot;gudang elit&quot;"/>
                 </then>
                 <else>
-                    <if expression="skorgudang &gt; 40">
-                        <then>
-                            <assign variable="kualitasgudang" expression="&quot;gudang perlu peningkatan&quot;"/>
-                        </then>
-                        <else/>
-                    </if>
                     <if expression="skorgudang&gt;=25">
                         <then>
                             <assign variable="kualitasgudang" expression="&quot;gudang standart&quot;"/>
                         </then>
                         <else>
-                            <if expression="skorgudang&gt;25">
+                            <if expression="skorgudang&lt;25">
                                 <then>
                                     <assign variable="kualitasgudang" expression="&quot;gudang perlu peningkatan&quot;"/>
                                 </then>
