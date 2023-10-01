@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="MSI GF 63"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-09-29 09:00:00 PM"/>
+        <attribute name="created" value="TVNJIEdGIDYzO01TSTsyMDIzLTA5LTI5OzA4OjE4OjM3IFBNOzIwNzQ="/>
+        <attribute name="edited" value="TVNJIEdGIDYzO01TSTsyMDIzLTA5LTI5OzA5OjAwOjAwIFBNOzE7MjE2NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="namagudang, ac, lantai, ketersediaanteknologi, rekomendasi" type="String" array="False" size=""/>
+            <declare name="kapasitasgudang, jumlahbuku" type="Integer" array="False" size=""/>
+            <declare name="skor" type="Integer" array="False" size=""/>
+            <input variable="namagudang"/>
+            <input variable="kapasitasgudang"/>
+            <input variable="jumlahbuku"/>
+            <input variable="ac"/>
+            <input variable="lantai"/>
+            <input variable="ketersediaanteknologi"/>
+            <assign variable="skor" expression="(jumlahbuku/kapasitasgudang)*100"/>
+            <if expression="skor &gt;=40">
+                <then>
+                    <assign variable="rekomendasi" expression="&quot;gudang elite&quot;"/>
+                </then>
+                <else>
+                    <if expression="skor&gt;=25">
+                        <then>
+                            <assign variable="rekomendasi" expression="&quot;gudang standar&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="skor&lt;25">
+                                <then>
+                                    <assign variable="rekomendasi" expression="&quot;gudang perlu peningkatan&quot;"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="namagudang&amp;&quot;|&quot;&amp;kapasitasgudang&amp;&quot;|&quot;&amp;jumlahbuku&amp;&quot;|&quot;&amp;ac&amp;&quot;|&quot;&amp;lantai&amp;&quot;|&quot;&amp;ketersediaanteknologi&amp;&quot;|&quot;&amp;skor&amp;&quot;|&quot;&amp;rekomendasi" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
