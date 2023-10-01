@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Early nathalia onal"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-01 02:22:59 PM"/>
+        <attribute name="created" value="RWFybHkgbmF0aGFsaWEgb25hbDtMQVBUT1AtQk9VQTRCRE07MjAyMy0wOS0xMjswODowNjo0MiBQTTs0MTgz"/>
+        <attribute name="edited" value="RWFybHkgbmF0aGFsaWEgb25hbDtMQVBUT1AtQk9VQTRCRE07MjAyMy0xMC0wMTswMjoyMjo1OSBQTTs1OzQyODU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="deskripsitugas" type="String" array="False" size=""/>
+            <declare name="kodematakuliah" type="String" array="False" size=""/>
+            <declare name="namamatakuliah" type="String" array="False" size=""/>
+            <declare name="pengampu" type="String" array="False" size=""/>
+            <declare name="deadline" type="String" array="False" size=""/>
+            <declare name="formatpenamaantugas" type="String" array="False" size=""/>
+            <declare name="tingkatkesulitan" type="Integer" array="False" size=""/>
+            <declare name="harihinggadeadline" type="Integer" array="False" size=""/>
+            <declare name="status" type="String" array="False" size=""/>
+            <declare name="prioritas" type="Real" array="False" size=""/>
+            <declare name="hasil" type="String" array="False" size=""/>
+            <declare name="rekomendasitugas" type="String" array="False" size=""/>
+            <input variable="deskripsitugas"/>
+            <input variable="kodematakuliah"/>
+            <input variable="namamatakuliah"/>
+            <input variable="pengampu"/>
+            <input variable="deadline"/>
+            <input variable="formatpenamaantugas"/>
+            <input variable="tingkatkesulitan"/>
+            <input variable="harihinggadeadline"/>
+            <input variable="status"/>
+            <assign variable="prioritas" expression="tingkatkesulitan * (1.0/harihinggadeadline)"/>
+            <if expression="prioritas&gt;3.0">
+                <then>
+                    <assign variable="hasil" expression="&quot;penting! anda harus mengerjakan tugas ini segera &quot;"/>
+                </then>
+                <else>
+                    <if expression="prioritas &gt;=1.5 and prioritas&lt;=3.0">
+                        <then>
+                            <assign variable="hasil" expression="&quot;tugas ini memiliki prioritas menengah&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="prioritas&lt;1.5">
+                                <then>
+                                    <assign variable="hasil" expression="&quot;tugas ini relatif ringan,namun jangan tunda terlalu lama.&quot;"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;prioritas:&quot;&amp;tofixed(prioritas,2)" newline="True"/>
+            <output expression="deskripsitugas&amp;&quot;|&quot;&amp;kodematakuliah&amp;&quot;|&quot;&amp;namamatakuliah&amp;&quot;|&quot;&amp;pengampu&amp;&quot;|&quot;&amp;deadline&amp;&quot;|&quot;&amp;formatpenamaantugas&amp;&quot;|&quot;&amp;status&amp;&quot;|&quot;&amp;hasil" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
