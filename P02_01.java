@@ -1,4 +1,5 @@
 // 12S23021 - Eunike Purba
+
 import java.util.*;
 import java.lang.Math;
 
@@ -39,4 +40,3 @@ class P02_01 {
         return String.format("%." + digits + "f", value);
     }
 }
-
