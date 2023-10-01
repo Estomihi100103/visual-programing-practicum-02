@@ -4,36 +4,35 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="amos_"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2023-10-01 01:50:26 PM"/>
+        <attribute name="saved" value="2023-10-01 03:06:34 PM"/>
         <attribute name="created" value="YW1vc187TEFQVE9QLUc0NlNJUktEOzIwMjMtMDktMzA7MDE6MTA6MDEgUE07Mjg2MA=="/>
-        <attribute name="edited" value="YW1vc187TEFQVE9QLUc0NlNJUktEOzIwMjMtMTAtMDE7MDE6NTA6MjYgUE07MzsyOTcx"/>
+        <attribute name="edited" value="YW1vc187TEFQVE9QLUc0NlNJUktEOzIwMjMtMTAtMDE7MDM6MDY6MzQgUE07NDsyOTc0"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <declare name="namagudang, AC, lantai, ketersediaanteknolgi" type="String" array="False" size=""/>
+            <declare name="namagudang, AC, lantai, ketersediaanteknologi, kualitasgudang" type="String" array="False" size=""/>
             <declare name="kapasitasgudang, jumlahbukusaatini, skor" type="Integer" array="False" size=""/>
             <input variable="namagudang"/>
+            <input variable="kapasitasgudang"/>
+            <input variable="jumlahbukusaatini"/>
             <input variable="AC"/>
             <input variable="lantai"/>
             <input variable="ketersediaanteknologi"/>
-            <input variable="kapasitasgudang"/>
-            <input variable="jumlahbukusaatini"/>
-            <input variable="skor"/>
-            <assign variable="skor" expression="(jumlahbukusaatini/kapasitasgudang)"/>
+            <assign variable="skor" expression="(jumlahbukusaatini/kapasitasgudang)*100"/>
             <if expression="skor &gt;=40">
                 <then>
-                    <assign variable="kualitasgudang" expression="gudangelit"/>
+                    <assign variable="kualitasgudang" expression="&quot;GudangElite&quot;"/>
                 </then>
                 <else>
                     <if expression="skor &gt;=25">
                         <then>
-                            <assign variable="kualitasgudang" expression="gudangstandar"/>
+                            <assign variable="kualitasgudang" expression="&quot;GudangStandar&quot;"/>
                         </then>
                         <else>
                             <if expression="skor &lt;25">
                                 <then>
-                                    <assign variable="kualitasgudang" expression="gudangperlupeningkatan"/>
+                                    <assign variable="kualitasgudang" expression="&quot;GudangPerluPeningkatan&quot;"/>
                                 </then>
                                 <else/>
                             </if>
@@ -42,7 +41,7 @@
                 </else>
             </if>
             <output expression="&quot;informasi gudang&quot;" newline="True"/>
-            <output expression="namagudang &amp;&quot;|&quot;&amp; AC&amp;&quot;|&quot;&amp;lantai&amp;&quot;|&quot;&amp;ketersediaanteknolgi&amp;&quot;|&quot;&amp;kapasitasgudang&amp;&quot;|&quot;&amp; jumlahbukusaatini&amp;&quot;|&quot;&amp;skor" newline="True"/>
+            <output expression="namagudang&amp;&quot;|&quot;&amp;kapasitasgudang&amp;&quot;|&quot;&amp;jumlahbukusaatini&amp;&quot;|&quot;&amp;AC&amp;&quot;|&quot;&amp;lantai&amp;&quot;|&quot;&amp;ketersediaanteknologi&amp;&quot;|&quot;&amp;skor&amp;&quot;|&quot;&amp;kualitasgudang" newline="True"/>
         </body>
     </function>
 </flowgorithm>
