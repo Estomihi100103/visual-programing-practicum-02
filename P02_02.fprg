@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-10-01 11:38:29 PM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtTE1RM0lNQko7MjAyMy0xMC0wMTswNDoxNzoyNCBBTTsyNjU2"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtTE1RM0lNQko7MjAyMy0xMC0wMTswNDoxOToyNyBBTTsyO2p1bGl1O0tBSVNBUjsyMDIzLTA5LTI4OzA5OjE1OjQxIFBNO1AwMl8yWzFdLmZwcmc7NjIwNw=="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtTE1RM0lNQko7MjAyMy0xMC0wMTsxMTozODoyOSBQTTsyOzI3ODY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="namagudang, AC, lantai, ketersediaanteknologi, kualitasgudang" type="String" array="False" size=""/>
+            <declare name="kapasitasgudang, jumlahbukusaatini, PoinGudang" type="Integer" array="False" size=""/>
+            <input variable="namagudang"/>
+            <input variable="kapasitasgudang"/>
+            <input variable="jumlahbukusaatini"/>
+            <input variable="AC"/>
+            <input variable="lantai"/>
+            <input variable="ketersediaanteknologi"/>
+            <assign variable="PoinGudang" expression="(jumlahbukusaatini / kapasitasgudang) * 100"/>
+            <if expression="PoinGudang &gt;= 40">
+                <then>
+                    <assign variable="kualitasgudang" expression="&quot;Gudang Elite&quot;"/>
+                </then>
+                <else>
+                    <if expression="PoinGudang &gt;= 25 &amp;&amp; PoinGudang&lt;40">
+                        <then>
+                            <assign variable="kualitasgudang" expression="&quot;Gudang Standar&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="PoinGudang &lt;  25">
+                                <then>
+                                    <assign variable="kualitasgudang" expression="&quot;Gudang Perlu Peningkatan&quot;"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Informasi Gudang : &quot;" newline="True"/>
+            <output expression="namagudang &amp;&quot;|&quot; &amp;kapasitasgudang &amp;&quot;|&quot; &amp;jumlahbukusaatini &amp;&quot;|&quot; &amp;AC &amp;&quot;|&quot; &amp;lantai &amp;&quot;|&quot; &amp;ketersediaanteknologi &amp;&quot;|&quot; &amp;PoinGudang &amp;&quot;|&quot; &amp;kualitasgudang" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
+SS
